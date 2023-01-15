@@ -9,13 +9,51 @@
     <meta name="author" content="Ascended" />
     <title>Call Center</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/svg" sizes="16x16" href="imgs/call-logo.svg" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="header-top container">
-        <div class="header-logo">
+        <div class="header-logo tablet-hidden">
           <img src="./imgs/call-logo.svg" alt="Website Logo" />
           <p class="logo-text">Digitalify.fr</p>
+        </div>
+        <div class="header-mobile tablet-show">
+          <div class="header-logo">
+            <img src="./imgs/call-logo.svg" alt="Website Logo" />
+            <p class="logo-text">Digitalify.fr</p>
+          </div>
+          <button onclick="toggleActive('header')">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="open"
+            >
+              <path
+                d="M11 17L19 17M5 12H19M11 7L19 7"
+                stroke="#374447"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="close"
+            >
+              <path
+                d="M23.4527 6.66666L15.9993 14.12L8.54602 6.66666L6.66602 8.54666L14.1193 16L6.66602 23.4533L8.54602 25.3333L15.9993 17.88L23.4527 25.3333L25.3327 23.4533L17.8793 16L25.3327 8.54666L23.4527 6.66666Z"
+                fill="#001423"
+              />
+            </svg>
+          </button>
         </div>
         <ul class="header-list">
           <li class="header-item">
@@ -31,6 +69,11 @@
             <a href="#" class="header-link">Contact</a>
           </li>
         </ul>
+        <img
+          src="./imgs/some-girl-hand-on-the-left-side-mobile.png"
+          alt="Some girl"
+          class="hero-mobile-img tablet-show"
+        />
       </div>
       <div class="header-hero">
         <div class="hero-left">
@@ -80,7 +123,7 @@
         <img
           src="./imgs/some-girl-hand-on-the-left-side.png"
           alt="Some girl"
-          class="hero-right"
+          class="hero-right tablet-hidden"
         />
       </div>
     </header>
@@ -262,5 +305,6 @@
         <p class="copyright">©2023 All rights reserved</p>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
